@@ -1,0 +1,8 @@
+.*
+*.*
+bin
+e2e
+fragments
+src
+node_modules
+target

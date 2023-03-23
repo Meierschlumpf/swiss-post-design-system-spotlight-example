@@ -1,0 +1,42 @@
+<section class="layout-container header-big with-searchbar">
+	<sp-intranet-header siteTitle="PostWeb" [showIntranetSearch]="true">
+		<li class="nav-item">
+			<a class="col-auto py-3 px-5 nav-link">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="col-auto py-3 px-5 nav-link">Post Informatik</a>
+		</li>
+		<li class="nav-item">
+			<a class="col-auto py-3 px-5 nav-link">HR-Portal</a>
+		</li>
+		<li class="nav-item">
+			<a class="col-auto py-3 px-5 nav-link">Service-Portal</a>
+		</li>
+		<li class="nav-item">
+			<a class="col-auto py-3 px-5 nav-link">Die Post</a>
+		</li>
+	</sp-intranet-header>
+	<spotlight-provider
+		[actions]="spotlightActions"
+		(triggered)="handleTrigger($event)"
+	></spotlight-provider>
+	<div class="site-content container-fluid header-margin">
+		<div class="row flex-grow-1">
+			<nav
+				class="col-md-3 col-lg-2 d-md-flex bg-light sidebar p-md-3"
+				id="sidebar"
+				[ngClass]="{'closed': !openedMenu}"
+			>
+				<div class="sidebar-sticky header-margin bg-light">
+					<!-- left menu -->
+					<button (click)="openSpotlight()" class="btn btn-primary">
+						Open Spotlight
+					</button>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9 col-lg-10 p-3">
+				<router-outlet></router-outlet>
+			</main>
+		</div>
+	</div>
+</section>

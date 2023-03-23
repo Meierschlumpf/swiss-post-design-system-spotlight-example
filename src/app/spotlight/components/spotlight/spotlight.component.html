@@ -1,0 +1,24 @@
+<div class="modal-body spotlight-wrapper">
+	<div class="spotlight-search">
+		<i class="pi pi-2069"></i>
+		<input
+			placeholder="Search Documentation"
+			(input)="handleFilter($event)"
+			(keydown)="handleKey($event)"
+		/>
+	</div>
+	<div class="spotlight-items">
+		<button
+			class="spotlight-item"
+			*ngFor="let item of filteredActions; index as i"
+			[ngClass]="{active: isActive(i)}"
+			(click)="trigger(i)"
+		>
+			<p class="spotlight-item-title">{{item.title}}</p>
+			<p class="spotlight-item-description">{{item.description}}</p>
+		</button>
+		<p *ngIf="filteredActions.length === 0" class="spotlight-nothing-found">
+			Nothing found
+		</p>
+	</div>
+</div>

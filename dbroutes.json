@@ -1,0 +1,11 @@
+{
+    "/api/sample/countries": "/countries",
+    "/api/sample/countries/*": "/countries/$1",
+    "/api/core/translations/*": "/translations/$1",
+    "/auth/users/current": "/user",
+    "/auth/login": "/fakeLoginResponse",
+    "/info": "/info",
+    "/health": "/health",
+    "/health/live": "/health/live",
+    "/health/ready": "/health/ready"
+}

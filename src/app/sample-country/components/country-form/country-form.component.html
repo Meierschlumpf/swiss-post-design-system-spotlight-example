@@ -1,0 +1,35 @@
+<form (ngSubmit)="handleSubmit(form.value)" #form="ngForm" novalidate>
+
+    <div>
+        <div class="input-group" [ngClass]="{ 'is-invalid': name.invalid && name.touched}">
+            <input name="name"
+                   id="name"
+                   class="form-control"
+                   [ngModel]="country?.name"
+                   required
+                   #name="ngModel"
+                   [ngClass]="{ 'is-invalid': name.invalid && name.touched}"
+                   type="text"/>
+            <div id="descriptionRequiredError"
+                 *ngIf="name.errors && name.errors.required && name.touched"
+                 class="invalid-feedback">
+                {{'sample.country.error.name.required' | translate}}
+            </div>
+        </div>
+
+        <div *ngFor="let error of errors | field: 'name'">
+            <div *ngIf="!name.errors?.required" class="pt-2">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{error.message | translate}}
+                    <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="text-end">
+        <button id="save" class="btn btn-primary" type="submit" [disabled]="form.invalid" translate>
+            sample.country.button.save
+        </button>
+    </div>
+</form>

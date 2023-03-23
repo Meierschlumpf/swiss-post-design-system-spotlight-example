@@ -1,0 +1,53 @@
+{
+    "fakeLoginResponse": {
+        "username": "admin",
+        "password": "admin"
+    },
+    "user": {
+        "username": "admin",
+        "firstname": "name",
+        "lastname": "lastname",
+        "email": "admin@post.ch",
+        "roles": [
+            "ROLE_ADMIN"
+        ]
+    },
+    "countries": [
+        {
+            "id": 1,
+            "name": "Switzerland"
+        },
+        {
+            "id": 2,
+            "name": "England"
+        },
+        {
+            "id": 3,
+            "name": "Italy"
+        },
+        {
+            "id": 4,
+            "name": "France"
+        },
+        {
+            "id": 5,
+            "name": "Germany"
+        },
+        {
+            "id": 6,
+            "name": "Belgium"
+        }
+    ],
+    "info": {
+        "artifactId": "spotlight-test",
+        "version": "0.1.0-SNAPSHOT",
+        "groupId": "spotlight-test",
+        "buildNumber": "2018-03-06T10:29:27Z",
+        "environment": "dev",
+        "uptime": 1520332418653
+    },
+    "health": {
+        "status" : "UP",
+        "groups" : [ "live", "liveness", "readiness", "ready" ]
+    }
+}

@@ -1,0 +1,21 @@
+[
+    {
+        "context": [
+            "/api",
+            "/admin",
+            "/monitoring",
+            "/jmx",
+            "/health",
+            "/info",
+            "/auth",
+            "/swagger-ui/",
+            "/webjars",
+            "/swagger-resources",
+            "/v2/api-docs"
+        ],
+        "target": "http://localhost:3000/",
+        "secure": false,
+        "logLevel": "debug",
+        "timeout": 600000
+    }
+]

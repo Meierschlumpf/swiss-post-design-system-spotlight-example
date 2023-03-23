@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <title>spotlight-test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script type="text/javascript" src="assets/environments/environment.js"></script>
+
+        
+        <!-- please adapt for production and add additional policies! -->
+        <meta http-equiv="Content-Security-Policy"
+            content="default-src 'none';
+                script-src 'self' 'unsafe-eval';
+                style-src 'self' 'unsafe-inline';
+                img-src 'self' data: *.pnet.ch *.post.ch;
+                connect-src 'self' https://n.accountint1.post.ch https://int.post.ch ws://localhost:4200 *.coveo.com places.post.ch;
+                form-action 'self' https://sharepoint.sp.swisspost.com;
+                base-uri 'self';
+                font-src 'self' https://fonts.post.ch data: 'self'">
+    </head>
+    <body>
+        <spotlight-test-root></spotlight-test-root>
+    </body>
+</html>
